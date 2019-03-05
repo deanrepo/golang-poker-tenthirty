@@ -1,0 +1,5 @@
+{
+    "listenAddress": "localhost:8889",
+    "relationalDB": "mysql",
+    "relationalDSN": "dean:Dean#168168@tcp(192.168.1.12:3306)/poker?collation=utf8mb4_unicode_ci&parseTime=true&loc=Local"
+}

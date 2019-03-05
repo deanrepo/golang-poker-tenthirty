@@ -1,0 +1,41 @@
+
+syntax = "proto3";
+package message;
+
+
+// [START messages]
+enum MsgType {
+    Login = 0;
+    LoginRes = 1;
+}
+
+message Msg {
+    MsgType type = 1;
+    bytes content = 2;
+}
+
+message User {
+    int32 userID = 1;
+    string nickname = 2;
+    string email = 3;
+    string userPwd = 4;
+    int32 score = 5;
+    int32 coin = 6;
+}
+
+message MsgLogin {
+    User user = 1;
+}
+
+message MsgSignIn {
+    int32 continuousSignInTimes = 1;
+    int32 bonusCoin = 2;
+}
+
+message MsgLoginRes {
+    User user =1;
+    MsgSignIn signInfo = 2;
+    int32 code = 3;
+    string error = 4;
+}
+// [END messages]
